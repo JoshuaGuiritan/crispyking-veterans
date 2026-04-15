@@ -59,24 +59,24 @@ const home = ({ about, products, contacts }) => {
       className={`${img} w-screen h-screen bg-no-repeat bg-cover bg-center transition-all duration-1000`}
     >
       <div
-        className={`bg-[#000000b4] w-full h-full flex flex-col justify-start items-start`}
+        className={`bg-[#000000cc] w-full h-full flex flex-col justify-start items-start backdrop-blur-sm`}
       >
         <div className="relative w-full">
-          <div className="w-full h-24 flex justify-between absolute top-0">
-            <div className="w-50 h-full flex justify-start items-center">
+          <div className="w-full h-24 flex justify-between px-6 md:px-12 absolute top-0 z-50">
+            <div className="h-full flex justify-start items-center">
               <FadeInSection>
               <img
                 src="/assets/Icons/cklogo.jpg"
                 alt="crispyking logo"
-                className="md:w-25 w-22 ml-8 transition-all duration-500 ease-out"
+                className="md:w-20 w-16 transition-all duration-500 ease-out hover:scale-110"
               />
               </FadeInSection>
             </div>
-            <div className="md:w-130 w-40 h-full text-white text-sm flex justify-end items-center font-garet transition-all duration-500 ease-out">
+            <div className="h-full text-white text-sm flex justify-end items-center font-garet gap-8 transition-all duration-500 ease-out">
               <FadeInSection>
               <a
                 role="button"
-                className="mr-10 md:block hidden cursor-pointer hover:text-gray-300"
+                className="md:block hidden cursor-pointer text-white hover:text-ck-yellow transition-colors duration-300 font-medium tracking-wider"
                 onClick={scrollAbout}
               >
                 ABOUT
@@ -85,7 +85,7 @@ const home = ({ about, products, contacts }) => {
               <FadeInSection>
               <a
                 role="button"
-                className="mr-10 md:block hidden cursor-pointer hover:text-gray-300"
+                className="md:block hidden cursor-pointer text-white hover:text-ck-yellow transition-colors duration-300 font-medium tracking-wider"
                 onClick={scrollProducts}
               >
                 PRODUCTS
@@ -94,7 +94,7 @@ const home = ({ about, products, contacts }) => {
               <FadeInSection>
               <a
                 role="button"
-                className="mr-10 md:block hidden cursor-pointer hover:text-gray-300"
+                className="md:block hidden cursor-pointer text-white hover:text-ck-yellow transition-colors duration-300 font-medium tracking-wider"
                 onClick={scrollContacts}
               >
                 CONTACTS
@@ -106,36 +106,34 @@ const home = ({ about, products, contacts }) => {
                 className="md:hidden block cursor-pointer"
                 onClick={clickedMenu}
               >
-                <div className="mr-6 h-full">
-                  <div className={`p-2 ${hoverMenu}`}>
-                    <img
-                      src="/assets/Icons/Menu-icon.png"
-                      alt="menu icon"
-                      className="w-10"
-                    />
-                  </div>
+                <div className="p-2 rounded-lg hover:bg-white/10 transition-all">
+                  <img
+                    src="/assets/Icons/Menu-icon.png"
+                    alt="menu icon"
+                    className="w-8"
+                  />
                 </div>
               </a>
               </FadeInSection>
             </div>
           </div>
           {dropDown && (
-              <div className={`text-[14px] w-full h-45 bg-[#00000046] text-white flex flex-col justify-evenly items-center font-garet ${ddEffect} transition-all duration-300 md:hidden mt-22`}>
+              <div className={`text-base w-full bg-[#000000cc] text-white flex flex-col justify-center items-center font-garet ${ddEffect} transition-all duration-300 md:hidden mt-24 gap-4 py-6`}>
                 <a
                   role="button"
-                  className="cursor-pointer hover:text-gray-300"
+                  className="cursor-pointer hover:text-ck-yellow transition-colors duration-300"
                   onClick={scrollAbout}
                 >
                   ABOUT
                 </a>
                 <a
                   role="button"
-                  className="cursor-pointer hover:text-gray-300"
+                  className="cursor-pointer hover:text-ck-yellow transition-colors duration-300"
                   onClick={scrollProducts}
                 >
                   PRODUCTS
                 </a>
-                <a role="button" className="cursor-pointer hover:text-gray-300" onClick={scrollContacts}>
+                <a role="button" className="cursor-pointer hover:text-ck-yellow transition-colors duration-300" onClick={scrollContacts}>
                   CONTACTS
                 </a>
               </div>
@@ -144,35 +142,35 @@ const home = ({ about, products, contacts }) => {
 
         
         <div
-          className={`md:h-screen ${hScreen} w-full flex justify-center items-center md:flex-row flex-col transition-all duration-700 ease-out`}
+          className={`md:h-screen ${hScreen} w-full flex justify-center items-center md:flex-row flex-col transition-all duration-700 ease-out gap-8 md:gap-16 px-6`}
         >
           <FadeInSection>
-          <div className="md:h-60 xl:w-185 lg:w-140 md:w-90 sm:w-145 w-110 flex flex-col justify-center md:items-start items-center">
-            <h1 className="font-milk text-white xl:text-7xl lg:text-5xl md:text-4xl sm:text-5xl text-[35px]">
+          <div className="flex flex-col justify-center md:items-start items-center max-w-2xl">
+            <h1 className="font-milk text-white xl:text-8xl lg:text-7xl md:text-5xl sm:text-6xl text-4xl leading-tight">
               Veterans Branch
             </h1>
-            <h3 className="font-garet text-white xl:4xl lg:text-2xl md:text-xl sm:text-lg text-[15px]">
+            <h3 className="font-garet text-ck-yellow xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg mt-3 font-medium tracking-wider">
               Zamboanga City
             </h3>
-            <div className="w-full md:h-31 h-20 flex md:justify-end justify-center md:items-center items-end">
-              <h3 className="font-milk-cursive text-ck-yellow lg:text-2xl md:text-base sm:text-lg text-base md:relative md:top-2 md:left-14">
-                Click store for location
-              </h3>
-              <div className="relative top-13 md:block hidden">
-                <img
-                  src="/assets/Icons/yellow-arrow.png"
-                  className="lg:w-60 w-50"
-                />
-              </div>
+            <p className="text-white/80 font-garet text-lg md:text-base mt-6 md:mt-8 text-center md:text-left leading-relaxed">
+              Taste the crispy perfection. Local flavors, signature quality.
+            </p>
+            <div className="w-full flex md:justify-start justify-center md:items-center items-end mt-8 md:mt-10">
+              <a target="_blank" href={`${locationLink}`} className="group inline-flex items-center gap-3 px-8 py-3 md:py-4 bg-ck-yellow text-black font-milk rounded-lg hover:bg-ck-yellow/90 transition-all duration-300 font-bold text-lg md:text-xl">
+                Find Us Here
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
             </div>
           </div>
           </FadeInSection>
           <FadeInSection>
-          <a target="_blank" href={`${locationLink}`}>
+          <a target="_blank" href={`${locationLink}`} className="group">
             <img
               src="/assets/Icons/Store.png"
               alt="store logo"
-              className="xl:w-100 lg:w-90 md:w-80 sm:w-75 w-60 hover:scale-105 transition-all duration-500 ease-out mt-3"
+              className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-56 hover:scale-110 transition-all duration-500 ease-out filter drop-shadow-lg group-hover:drop-shadow-2xl"
               title="Crispy King - Veterans Bran Location via Google Maps"
             />
           </a>
