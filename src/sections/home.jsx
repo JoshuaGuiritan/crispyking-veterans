@@ -58,123 +58,117 @@ const home = ({ about, products, contacts }) => {
     <div
       className={`${img} w-screen h-screen bg-no-repeat bg-cover bg-center transition-all duration-1000`}
     >
-      <div
-        className={`bg-[#000000cc] w-full h-full flex flex-col justify-start items-start backdrop-blur-sm`}
-      >
-        <div className="relative w-full">
-          <div className="w-full h-24 flex justify-between px-6 md:px-12 absolute top-0 z-50">
-            <div className="h-full flex justify-start items-center">
-              <FadeInSection>
+      <div className="bg-black/60 w-full h-full flex flex-col justify-start items-start backdrop-blur-sm">
+        <nav className="relative w-full">
+          <div className="w-full h-20 flex justify-between items-center px-6 md:px-12 absolute top-0 z-50">
+            <FadeInSection>
               <img
                 src="/assets/Icons/cklogo.jpg"
-                alt="crispyking logo"
-                className="md:w-20 w-16 transition-all duration-500 ease-out hover:scale-110"
+                alt="Crispy King logo"
+                className="h-16 w-auto transition-all duration-300 hover:opacity-80"
               />
-              </FadeInSection>
-            </div>
-            <div className="h-full text-white text-sm flex justify-end items-center font-garet gap-8 transition-all duration-500 ease-out">
+            </FadeInSection>
+            <div className="hidden md:flex items-center gap-12">
               <FadeInSection>
-              <a
-                role="button"
-                className="md:block hidden cursor-pointer text-white hover:text-ck-yellow transition-colors duration-300 font-medium tracking-wider"
-                onClick={scrollAbout}
-              >
-                ABOUT
-              </a>
-              </FadeInSection>
-              <FadeInSection>
-              <a
-                role="button"
-                className="md:block hidden cursor-pointer text-white hover:text-ck-yellow transition-colors duration-300 font-medium tracking-wider"
-                onClick={scrollProducts}
-              >
-                PRODUCTS
-              </a>
-              </FadeInSection>
-              <FadeInSection>
-              <a
-                role="button"
-                className="md:block hidden cursor-pointer text-white hover:text-ck-yellow transition-colors duration-300 font-medium tracking-wider"
-                onClick={scrollContacts}
-              >
-                CONTACTS
-              </a>
-              </FadeInSection>
-              <FadeInSection>
-              <a
-                role="button"
-                className="md:hidden block cursor-pointer"
-                onClick={clickedMenu}
-              >
-                <div className="p-2 rounded-lg hover:bg-white/10 transition-all">
-                  <img
-                    src="/assets/Icons/Menu-icon.png"
-                    alt="menu icon"
-                    className="w-8"
-                  />
-                </div>
-              </a>
-              </FadeInSection>
-            </div>
-          </div>
-          {dropDown && (
-              <div className={`text-base w-full bg-[#000000cc] text-white flex flex-col justify-center items-center font-garet ${ddEffect} transition-all duration-300 md:hidden mt-24 gap-4 py-6`}>
-                <a
-                  role="button"
-                  className="cursor-pointer hover:text-ck-yellow transition-colors duration-300"
+                <button
                   onClick={scrollAbout}
+                  className="text-white text-sm font-garet font-medium tracking-wide hover:text-ck-red transition-colors duration-200 relative group"
                 >
                   ABOUT
-                </a>
-                <a
-                  role="button"
-                  className="cursor-pointer hover:text-ck-yellow transition-colors duration-300"
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ck-red group-hover:w-full transition-all duration-300"></span>
+                </button>
+              </FadeInSection>
+              <FadeInSection>
+                <button
                   onClick={scrollProducts}
+                  className="text-white text-sm font-garet font-medium tracking-wide hover:text-ck-red transition-colors duration-200 relative group"
                 >
                   PRODUCTS
-                </a>
-                <a role="button" className="cursor-pointer hover:text-ck-yellow transition-colors duration-300" onClick={scrollContacts}>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ck-red group-hover:w-full transition-all duration-300"></span>
+                </button>
+              </FadeInSection>
+              <FadeInSection>
+                <button
+                  onClick={scrollContacts}
+                  className="text-white text-sm font-garet font-medium tracking-wide hover:text-ck-red transition-colors duration-200 relative group"
+                >
                   CONTACTS
-                </a>
-              </div>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ck-red group-hover:w-full transition-all duration-300"></span>
+                </button>
+              </FadeInSection>
+            </div>
+            <FadeInSection>
+              <button
+                onClick={clickedMenu}
+                className="md:hidden flex flex-col gap-1.5 p-2 hover:bg-white/10 rounded-lg transition-all"
+              >
+                <span className="w-6 h-0.5 bg-white transition-all"></span>
+                <span className="w-6 h-0.5 bg-white transition-all"></span>
+                <span className="w-6 h-0.5 bg-white transition-all"></span>
+              </button>
+            </FadeInSection>
+          </div>
+          {dropDown && (
+            <div className={`w-full bg-black/80 backdrop-blur-md md:hidden flex flex-col items-center gap-6 py-8 mt-20 transition-all duration-300 ${ddEffect}`}>
+              <button onClick={scrollAbout} className="text-white text-sm font-garet font-medium hover:text-ck-red transition-colors">
+                ABOUT
+              </button>
+              <button onClick={scrollProducts} className="text-white text-sm font-garet font-medium hover:text-ck-red transition-colors">
+                PRODUCTS
+              </button>
+              <button onClick={scrollContacts} className="text-white text-sm font-garet font-medium hover:text-ck-red transition-colors">
+                CONTACTS
+              </button>
+            </div>
           )}
-        </div>
+        </nav>
 
         
-        <div
-          className={`md:h-screen ${hScreen} w-full flex justify-center items-center md:flex-row flex-col transition-all duration-700 ease-out gap-8 md:gap-16 px-6`}
-        >
-          <FadeInSection>
-          <div className="flex flex-col justify-center md:items-start items-center max-w-2xl">
-            <h1 className="font-milk text-white xl:text-8xl lg:text-7xl md:text-5xl sm:text-6xl text-4xl leading-tight">
-              Veterans Branch
-            </h1>
-            <h3 className="font-garet text-ck-yellow xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg mt-3 font-medium tracking-wider">
-              Zamboanga City
-            </h3>
-            <p className="text-white/80 font-garet text-lg md:text-base mt-6 md:mt-8 text-center md:text-left leading-relaxed">
-              Taste the crispy perfection. Local flavors, signature quality.
-            </p>
-            <div className="w-full flex md:justify-start justify-center md:items-center items-end mt-8 md:mt-10">
-              <a target="_blank" href={`${locationLink}`} className="group inline-flex items-center gap-3 px-8 py-3 md:py-4 bg-ck-yellow text-black font-milk rounded-lg hover:bg-ck-yellow/90 transition-all duration-300 font-bold text-lg md:text-xl">
-                Find Us Here
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
+        <div className="w-full h-full flex items-center justify-center px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-7xl items-center">
+            <FadeInSection>
+              <div className="flex flex-col gap-8">
+                <div>
+                  <h1 className="font-milk text-white xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold leading-tight tracking-tight">
+                    Crispy King
+                  </h1>
+                  <h2 className="font-garet text-ck-red xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl mt-4 font-bold tracking-wide">
+                    Veterans Branch
+                  </h2>
+                </div>
+                <p className="text-white/90 font-garet text-lg md:text-base leading-relaxed max-w-md">
+                  Zamboanga&apos;s favorite destination for crispy, delicious Filipino fried chicken. Premium quality, authentic taste, unbeatable value.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <a
+                    target="_blank"
+                    href={locationLink}
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-ck-red text-white font-milk font-bold text-lg rounded-lg hover:bg-ck-red-dark transition-all duration-300 hover:shadow-xl hover:shadow-ck-red/30"
+                  >
+                    Find Location
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <button
+                    onClick={scrollProducts}
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-milk font-bold text-lg rounded-lg hover:bg-white hover:text-ck-red transition-all duration-300"
+                  >
+                    View Menu
+                  </button>
+                </div>
+              </div>
+            </FadeInSection>
+            <FadeInSection delay={200}>
+              <a target="_blank" href={locationLink} className="group">
+                <img
+                  src="/assets/Icons/Store.png"
+                  alt="Crispy King storefront"
+                  className="w-full h-auto rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105 origin-center"
+                />
               </a>
-            </div>
+            </FadeInSection>
           </div>
-          </FadeInSection>
-          <FadeInSection>
-          <a target="_blank" href={`${locationLink}`} className="group">
-            <img
-              src="/assets/Icons/Store.png"
-              alt="store logo"
-              className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-56 hover:scale-110 transition-all duration-500 ease-out filter drop-shadow-lg group-hover:drop-shadow-2xl"
-              title="Crispy King - Veterans Bran Location via Google Maps"
-            />
-          </a>
-          </FadeInSection>
         </div>
       </div>
     </div>

@@ -2,37 +2,64 @@ import FadeInSection from "/src/components/FadeInSection";
 
 const contacts = ({contacts}) => {
     return(
-        <div ref={contacts} className="w-screen min-h-screen bg-[radial-gradient(circle_at_top_left,_#da2113,_#b50000)] overflow-x-hidden py-16 md:py-20 px-6">
-            <div className="w-full h-full flex sm:flex-row flex-col-reverse sm:justify-evenly justify-center items-center gap-12 md:gap-16">
-                <FadeInSection delay={300}>
-                <img src="/assets/Images/contact-ck.png" className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-56 transition-all duration-500 sm:mt-0 mt-8 hover:scale-105"/>
-                </FadeInSection>
-                <FadeInSection delay={300}>
-                <div className="flex flex-col justify-center items-center md:items-start max-w-lg">
-                    <h1 className="text-white font-milk xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl text-5xl mb-8 md:mb-12 transition-all duration-500 text-center md:text-left">
-                        Get In Touch
-                    </h1>
-                    <p className="text-white/80 font-garet text-lg text-center md:text-left mb-8">
-                        We'd love to hear from you! Reach out through any of these channels.
-                    </p>
-                    <div className="flex md:flex-col flex-col gap-6 w-full">
-                        <a href="tel:+630967-092-8349" target="_blank" className="group flex justify-center md:justify-start items-center gap-4 px-6 py-4 bg-ck-yellow/20 hover:bg-ck-yellow/40 rounded-xl transition-all duration-300 border border-ck-yellow/30 hover:border-ck-yellow">
-                            <img src="/assets/Icons/call.png" className="xl:w-8 lg:w-7 sm:w-6 w-5 group-hover:scale-110 transition-transform"/>
-                            <div className="flex flex-col md:items-start items-center">
-                                <span className="text-white/70 font-garet text-sm">Call Us</span>
-                                <h3 className="text-ck-yellow xl:text-2xl md:text-xl sm:text-lg text-base font-milk-cursive font-bold">0967-092-8349</h3>
-                            </div>
-                        </a>
-                        <a href="https://www.facebook.com/ck.veterans" target="_blank" className="group flex justify-center md:justify-start items-center gap-4 px-6 py-4 bg-ck-yellow/20 hover:bg-ck-yellow/40 rounded-xl transition-all duration-300 border border-ck-yellow/30 hover:border-ck-yellow">
-                            <img src="/assets/Icons/facebook-icon.png" className="xl:w-8 lg:w-7 sm:w-6 w-5 group-hover:scale-110 transition-transform"/>
-                            <div className="flex flex-col md:items-start items-center">
-                                <span className="text-white/70 font-garet text-sm">Follow Us</span>
-                                <h3 className="text-ck-yellow xl:text-2xl md:text-xl sm:text-lg text-base font-milk-cursive font-bold">CK Veterans</h3>
-                            </div>
-                        </a>
-                    </div>
+        <div ref={contacts} className="w-screen min-h-screen bg-gradient-to-b from-white via-gray-50 to-white overflow-x-hidden py-20 md:py-32 px-6">
+            <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16 md:mb-20">
+                    <FadeInSection delay={300}>
+                        <h2 className="text-ck-red font-garet text-sm md:text-base font-bold tracking-widest uppercase mb-4">Contact Us</h2>
+                        <h1 className="text-gray-900 font-milk lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold leading-tight mb-6">Let's Connect</h1>
+                        <p className="text-gray-600 font-garet text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">We'd love to hear from you. Reach out through any of your preferred channels.</p>
+                    </FadeInSection>
                 </div>
-                </FadeInSection>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+                    <FadeInSection delay={400}>
+                        <img 
+                            src="/assets/Images/contact-ck.png" 
+                            alt="Crispy King store" 
+                            className="w-full h-auto rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 origin-center"
+                        />
+                    </FadeInSection>
+
+                    <FadeInSection delay={500}>
+                        <div className="flex flex-col gap-8">
+                            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ck-red transition-all duration-300 group cursor-pointer">
+                                <a href="tel:+630967-092-8349" className="flex items-start gap-6">
+                                    <div className="flex-shrink-0 w-16 h-16 bg-ck-red/10 rounded-xl flex items-center justify-center group-hover:bg-ck-red group-hover:text-white transition-all">
+                                        <svg className="w-8 h-8 text-ck-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 00.948.684l1.498 7.49a1 1 0 00.502.756l2.73 1.365a1 1 0 001.27-.39l3.58-6.573A1 1 0 0020.537 7.75l-1.585 1.585a1 1 0 00-.21 1.09l1.413 2.83a1 1 0 01-.39 1.27l-2.73 1.365a1 1 0 01-1.27-.39l-3.58-6.573a1 1 0 00-.756-.502L5.684 8.22a1 1 0 00-.684-.948L2 6.268V5z" />
+                                        </svg>
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-gray-600 font-garet text-sm uppercase tracking-wider mb-1">Call Us</h3>
+                                        <p className="text-ck-red font-milk text-2xl font-bold">0967-092-8349</p>
+                                        <p className="text-gray-500 font-garet text-sm mt-2">Available during business hours</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ck-red transition-all duration-300 group cursor-pointer">
+                                <a href="https://www.facebook.com/ck.veterans" target="_blank" rel="noopener noreferrer" className="flex items-start gap-6">
+                                    <div className="flex-shrink-0 w-16 h-16 bg-ck-red/10 rounded-xl flex items-center justify-center group-hover:bg-ck-red group-hover:text-white transition-all">
+                                        <svg className="w-8 h-8 text-ck-red group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        </svg>
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="text-gray-600 font-garet text-sm uppercase tracking-wider mb-1">Follow Us</h3>
+                                        <p className="text-ck-red font-milk text-2xl font-bold">CK Veterans</p>
+                                        <p className="text-gray-500 font-garet text-sm mt-2">Connect and stay updated</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div className="bg-gradient-to-r from-ck-red to-ck-red-dark rounded-2xl p-8 text-white">
+                                <h3 className="font-milk text-xl font-bold mb-3">Visit Us Today</h3>
+                                <p className="font-garet leading-relaxed text-white/90">Experience authentic Filipino fried chicken that's crispy, hot, and absolutely delicious. We're located in the heart of Zamboanga City, ready to serve you!</p>
+                            </div>
+                        </div>
+                    </FadeInSection>
+                </div>
             </div>
         </div>
     );

@@ -11,95 +11,122 @@ import {
 
 const products = ({products}) => {
     return(
-        <div ref={products} className="w-screen min-h-screen bg-white overflow-x-hidden py-16 md:py-24">
-            <div className="w-full h-full flex flex-col justify-center items-center py-8">
-                <FadeInSection delay={300}>
-                <h1 className="text-[#da2113] font-milk xl:text-8xl lg:text-7xl md:text-6xl text-5xl md:mb-2 mb-4 transition-all duration-500 text-center">OUR MENU</h1>
-                <p className="text-gray-600 font-garet text-lg md:mb-16 mb-12 text-center font-medium">Crispy. Fresh. Delicious.</p>
-                </FadeInSection>
-                <FadeInSection delay={300}>
-                <Carousel className="xl:w-5xl lg:w-4xl md:w-3xl sm:w-xl w-sm transition-all duration-500">
-                    <CarouselContent className="flex justify-start items-center gap-4">
-                        <CarouselItem className="">
-                            <Card className="bg-white border-2 border-gray-200 rounded-2xl hover:shadow-xl hover:border-[#da2113] transition-all duration-300">
-                                <CardContent className="flex flex-col justify-center items-center md:aspect-video aspect-square p-6">
-                                    <div className="flex w-full h-full md:flex-row flex-col justify-center items-center gap-6">
-                                        <div className="flex justify-center items-center flex-shrink-0">
-                                            <img src="/assets/Icons/friedchicken.png" className="xl:w-80 lg:w-64 md:w-56 md:mb-0 mb-6 sm:w-60 w-48 transition-all duration-500 hover:scale-105"/>
+        <div ref={products} className="w-screen min-h-screen bg-white overflow-x-hidden py-20 md:py-32">
+            <div className="w-full flex flex-col items-center">
+                <div className="text-center mb-16 md:mb-20 px-6">
+                    <FadeInSection delay={300}>
+                        <h2 className="text-ck-red font-garet text-sm md:text-base font-bold tracking-widest uppercase mb-4">Signature Selection</h2>
+                        <h1 className="text-ck-red-dark font-milk xl:text-7xl lg:text-6xl md:text-5xl text-4xl font-bold mb-6 leading-tight">Our Menu</h1>
+                        <p className="text-gray-600 font-garet text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">Handcrafted Filipino favorites made with premium ingredients and authentic recipes</p>
+                    </FadeInSection>
+                </div>
+                <FadeInSection delay={400}>
+                    <div className="w-full max-w-6xl px-6">
+                        <Carousel className="w-full">
+                            <CarouselContent className="flex justify-start items-stretch gap-6">
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
+                            <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
+                                <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
+                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                                        <img src="/assets/Icons/friedchicken.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    </div>
+                                    <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
+                                        <div>
+                                            <h3 className="font-milk text-ck-red-dark text-2xl md:text-3xl font-bold mb-2">Crispy Fried Chicken</h3>
+                                            <p className="text-gray-600 font-garet text-sm md:text-base leading-relaxed">Premium quality, perfectly seasoned and fried golden brown</p>
                                         </div>
-                                        <div className="flex flex-col md:items-start items-center md:ml-0 ml-0">
-                                            <h1 className="xl:text-5xl lg:text-4xl sm:text-3xl text-xl font-milk text-gray-900 mb-3 transition-all duration-500">Crispy Fried Chicken</h1>
-                                            <h6 className="xl:text-2xl sm:text-lg text-sm font-milk-cursive text-[#da2113] transition-all duration-500 font-bold">₱40.00/pc</h6>
+                                        <div className="pt-4">
+                                            <div className="text-ck-red font-garet text-3xl font-bold">₱40.00</div>
+                                            <p className="text-gray-500 font-garet text-sm">per piece</p>
                                         </div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </CarouselItem>
-                        <CarouselItem className="">
-                            <Card className="bg-white border-2 border-gray-200 rounded-2xl hover:shadow-xl hover:border-[#da2113] transition-all duration-300">
-                                <CardContent className="flex flex-col justify-center items-center md:aspect-video aspect-square p-6">
-                                    <div className="flex w-full h-full md:flex-row flex-col justify-center items-center gap-6">
-                                        <div className="flex justify-center items-center flex-shrink-0">
-                                            <img src="/assets/Icons/ngohiong.png" className="xl:w-80 lg:w-64 md:w-56 sm:w-56 w-40 md:mb-0 mb-6 transition-all duration-500 hover:scale-105"/>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
+                            <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
+                                <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
+                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                                        <img src="/assets/Icons/ngohiong.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    </div>
+                                    <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
+                                        <div>
+                                            <h3 className="font-milk text-ck-red-dark text-2xl md:text-3xl font-bold mb-2">Ngohiong</h3>
+                                            <p className="text-gray-600 font-garet text-sm md:text-base leading-relaxed">Traditional Filipino spring rolls, crispy and flavorful</p>
                                         </div>
-                                        <div className="flex flex-col md:items-start items-center md:ml-0 ml-0">
-                                            <div className="xl:text-5xl lg:text-4xl sm:text-3xl text-xl font-milk text-gray-900 mb-3 transition-all duration-500">Ngohiong</div>
-                                            <div className="xl:text-2xl sm:text-lg text-sm font-milk-cursive text-[#da2113] transition-all duration-500 font-bold">₱10.00/pc</div>
+                                        <div className="pt-4">
+                                            <div className="text-ck-red font-garet text-3xl font-bold">₱10.00</div>
+                                            <p className="text-gray-500 font-garet text-sm">per piece</p>
                                         </div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </CarouselItem>
-                        <CarouselItem className="">
-                            <Card className="bg-white border-2 border-gray-200 rounded-2xl hover:shadow-xl hover:border-[#da2113] transition-all duration-300">
-                                <CardContent className="flex flex-col justify-center items-center md:aspect-video aspect-square p-6">
-                                    <div className="flex w-full h-full md:flex-row flex-col justify-center items-center gap-6">
-                                        <div className="flex justify-center items-center flex-shrink-0">
-                                            <img src="/assets/Icons/meatball.png" className="xl:w-80 lg:w-64 md:w-56 sm:w-56 w-40 md:mb-0 mb-6 transition-all duration-500 hover:scale-105"/>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
+                            <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
+                                <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
+                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                                        <img src="/assets/Icons/meatball.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    </div>
+                                    <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
+                                        <div>
+                                            <h3 className="font-milk text-ck-red-dark text-2xl md:text-3xl font-bold mb-2">Bola-Bola</h3>
+                                            <p className="text-gray-600 font-garet text-sm md:text-base leading-relaxed">Savory meat and spice meatballs, deliciously fried</p>
                                         </div>
-                                        <div className="flex flex-col md:items-start items-center md:ml-0 ml-0">
-                                            <div className="xl:text-5xl lg:text-4xl sm:text-3xl text-xl font-milk text-gray-900 mb-3 transition-all duration-500">Bola-bola</div>
-                                            <div className="xl:text-2xl sm:text-lg text-sm font-milk-cursive text-[#da2113] transition-all duration-500 font-bold">₱10.00/pc</div>
+                                        <div className="pt-4">
+                                            <div className="text-ck-red font-garet text-3xl font-bold">₱10.00</div>
+                                            <p className="text-gray-500 font-garet text-sm">per piece</p>
                                         </div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </CarouselItem>
-                        <CarouselItem className="">
-                            <Card className="bg-white border-2 border-gray-200 rounded-2xl hover:shadow-xl hover:border-[#da2113] transition-all duration-300">
-                                <CardContent className="flex flex-col justify-center items-center md:aspect-video aspect-square p-6">
-                                    <div className="flex w-full h-full md:flex-row flex-col justify-center items-center gap-6">
-                                        <div className="flex justify-center items-center flex-shrink-0">
-                                            <img src="/assets/Icons/siomai.png" className="xl:w-80 lg:w-64 md:w-56 sm:w-48 w-40 md:mb-0 mb-6 transition-all duration-500 hover:scale-105"/>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
+                            <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
+                                <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
+                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                                        <img src="/assets/Icons/siomai.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    </div>
+                                    <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
+                                        <div>
+                                            <h3 className="font-milk text-ck-red-dark text-2xl md:text-3xl font-bold mb-2">Siomai</h3>
+                                            <p className="text-gray-600 font-garet text-sm md:text-base leading-relaxed">Steamed pork dumplings with authentic Filipino flavors</p>
                                         </div>
-                                        <div className="flex flex-col md:items-start items-center md:ml-0 ml-0">
-                                            <div className="xl:text-5xl lg:text-4xl sm:text-3xl text-xl font-milk text-gray-900 mb-3 transition-all duration-500">Siomai</div>
-                                            <div className="xl:text-2xl sm:text-lg text-sm font-milk-cursive text-[#da2113] transition-all duration-500 font-bold">₱30.00/4pc</div>
+                                        <div className="pt-4">
+                                            <div className="text-ck-red font-garet text-3xl font-bold">₱30.00</div>
+                                            <p className="text-gray-500 font-garet text-sm">for 4 pieces</p>
                                         </div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </CarouselItem>
-                        <CarouselItem className="">
-                            <Card className="bg-white border-2 border-gray-200 rounded-2xl hover:shadow-xl hover:border-[#da2113] transition-all duration-300">
-                                <CardContent className="flex flex-col justify-center items-center md:aspect-video aspect-square p-6">
-                                    <div className="flex w-full h-full md:flex-row flex-col justify-center items-center gap-6">
-                                        <div className="flex justify-center items-center flex-shrink-0">
-                                            <img src="/assets/Icons/lumpia.png" className="xl:w-80 lg:w-64 md:w-56 sm:w-60 w-48 md:mb-0 mb-6 transition-all duration-500 hover:scale-105"/>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
+                            <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
+                                <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
+                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                                        <img src="/assets/Icons/lumpia.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    </div>
+                                    <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
+                                        <div>
+                                            <h3 className="font-milk text-ck-red-dark text-2xl md:text-3xl font-bold mb-2">Lumpiang Shanghai</h3>
+                                            <p className="text-gray-600 font-garet text-sm md:text-base leading-relaxed">Classic Filipino spring rolls with meat and vegetables</p>
                                         </div>
-                                        <div className="flex flex-col md:items-start items-center md:ml-0 ml-0">
-                                            <div className="xl:text-4xl lg:text-3xl sm:text-2xl text-lg font-milk text-gray-900 mb-3 transition-all duration-500">Lumpiang Shanghai</div>
-                                            <div className="xl:text-2xl sm:text-lg text-sm font-milk-cursive text-[#da2113] transition-all duration-500 font-bold">₱8.00/pc</div>
+                                        <div className="pt-4">
+                                            <div className="text-ck-red font-garet text-3xl font-bold">₱8.00</div>
+                                            <p className="text-gray-500 font-garet text-sm">per piece</p>
                                         </div>
                                     </div>
                                 </CardContent>
                             </Card>
                         </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious className="bg-[#da2113] border-none hover:bg-[#b50000] cursor-pointer text-white hover:text-white sm:flex justify-center hidden w-12 h-12 rounded-full transition-all"/>
-                    <CarouselNext className="bg-[#da2113] border-none hover:bg-[#b50000] cursor-pointer text-white hover:text-white sm:flex justify-center hidden w-12 h-12 rounded-full transition-all"/>
-                    <h1 className="sm:hidden block text-sm text-[#da2113] mt-8 font-garet text-center font-medium">Swipe to see more</h1>
-                </Carousel>
+                            </CarouselContent>
+                            <div className="flex justify-center items-center gap-4 mt-8">
+                                <CarouselPrevious className="bg-ck-red border-none hover:bg-ck-red-dark cursor-pointer text-white hover:text-white hidden md:flex w-12 h-12 rounded-full transition-all"/>
+                                <CarouselNext className="bg-ck-red border-none hover:bg-ck-red-dark cursor-pointer text-white hover:text-white hidden md:flex w-12 h-12 rounded-full transition-all"/>
+                            </div>
+                            <p className="md:hidden text-sm text-gray-600 text-center font-garet mt-6">Swipe to explore more items</p>
+                        </Carousel>
+                    </div>
                 </FadeInSection>
             </div>
         </div>
