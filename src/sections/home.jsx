@@ -29,9 +29,13 @@ const home = ({ about, products, contacts }) => {
   };
 
   useEffect(() => {
-    dropDown ? sethoverMenu("border border-gray-400 rounded-sm") : sethoverMenu("");
-    !dropDown ? setHScreen("h-screen") : setHScreen("h-120");
-    !dropDown ? setddEffect("max-h-0 opacity-0") : setddEffect("max-h-45 opacity-100");
+    if (dropDown) {
+      setHScreen("h-auto");
+      setddEffect("max-h-screen opacity-100");
+    } else {
+      setHScreen("h-screen");
+      setddEffect("max-h-0 opacity-0 pointer-events-none");
+    }
   }, [dropDown]);
 
   useEffect(() => {
@@ -56,16 +60,16 @@ const home = ({ about, products, contacts }) => {
 
   return (
     <div
-      className={`${img} w-screen h-screen bg-no-repeat bg-cover bg-center transition-all duration-1000`}
+      className={`${img} w-screen min-h-screen bg-no-repeat bg-cover bg-center transition-all duration-1000`}
     >
-      <div className="bg-black/60 w-full h-full flex flex-col justify-start items-start backdrop-blur-sm">
-        <nav className="relative w-full border-b border-white/10">
+      <div className="bg-black/60 w-full min-h-screen flex flex-col justify-start items-start backdrop-blur-sm">
+        <nav className="relative w-full border-b border-white/10 z-50">
           <div className="w-full h-20 flex justify-between items-center px-6 md:px-16 absolute top-0 z-50">
             <FadeInSection>
               <img
                 src="/assets/Icons/cklogo.jpg"
                 alt="Crispy King logo"
-                className="h-14 w-auto transition-all duration-300 hover:opacity-85 active:opacity-70"
+                className="h-12 sm:h-14 w-auto transition-all duration-300 hover:opacity-85 active:opacity-70"
               />
             </FadeInSection>
             <div className="hidden md:flex items-center gap-16">
@@ -108,28 +112,26 @@ const home = ({ about, products, contacts }) => {
               </button>
             </FadeInSection>
           </div>
-          {dropDown && (
-            <div className={`w-full bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-lg md:hidden flex flex-col items-center gap-4 py-24 mt-20 transition-all duration-300 ${ddEffect}`}>
-              <button 
-                onClick={() => {scrollAbout(); setDropdown(false);}}
-                className="text-white text-sm font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/5"
-              >
-                About Us
-              </button>
-              <button 
-                onClick={() => {scrollProducts(); setDropdown(false);}}
-                className="text-white text-sm font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/5"
-              >
-                Our Menu
-              </button>
-              <button 
-                onClick={() => {scrollContacts(); setDropdown(false);}}
-                className="text-white text-sm font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/5"
-              >
-                Contact Us
-              </button>
-            </div>
-          )}
+          <div className={`absolute top-20 left-0 right-0 w-full bg-gradient-to-b from-black/95 to-black/80 backdrop-blur-lg md:hidden flex flex-col items-center gap-3 py-8 transition-all duration-300 ${ddEffect}`}>
+            <button 
+              onClick={() => {scrollAbout(); setDropdown(false);}}
+              className="text-white text-base font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10 w-full text-center"
+            >
+              About Us
+            </button>
+            <button 
+              onClick={() => {scrollProducts(); setDropdown(false);}}
+              className="text-white text-base font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10 w-full text-center"
+            >
+              Our Menu
+            </button>
+            <button 
+              onClick={() => {scrollContacts(); setDropdown(false);}}
+              className="text-white text-base font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10 w-full text-center"
+            >
+              Contact Us
+            </button>
+          </div>
         </nav>
 
         
