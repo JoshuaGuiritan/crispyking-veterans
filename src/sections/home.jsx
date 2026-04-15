@@ -59,100 +59,109 @@ const home = ({ about, products, contacts }) => {
       className={`${img} w-screen h-screen bg-no-repeat bg-cover bg-center transition-all duration-1000`}
     >
       <div className="bg-black/60 w-full h-full flex flex-col justify-start items-start backdrop-blur-sm">
-        <nav className="relative w-full">
-          <div className="w-full h-20 flex justify-between items-center px-6 md:px-12 absolute top-0 z-50">
+        <nav className="relative w-full border-b border-white/10">
+          <div className="w-full h-20 flex justify-between items-center px-6 md:px-16 absolute top-0 z-50">
             <FadeInSection>
               <img
                 src="/assets/Icons/cklogo.jpg"
                 alt="Crispy King logo"
-                className="h-16 w-auto transition-all duration-300 hover:opacity-80"
+                className="h-14 w-auto transition-all duration-300 hover:opacity-85 active:opacity-70"
               />
             </FadeInSection>
-            <div className="hidden md:flex items-center gap-12">
+            <div className="hidden md:flex items-center gap-16">
               <FadeInSection>
                 <button
                   onClick={scrollAbout}
-                  className="text-white text-sm font-garet font-medium tracking-wide hover:text-ck-red transition-colors duration-200 relative group"
+                  className="text-white text-xs font-garet font-semibold tracking-widest uppercase hover:text-ck-red transition-colors duration-200 relative group"
                 >
-                  ABOUT
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ck-red group-hover:w-full transition-all duration-300"></span>
+                  About
+                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-ck-red group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </button>
               </FadeInSection>
               <FadeInSection>
                 <button
                   onClick={scrollProducts}
-                  className="text-white text-sm font-garet font-medium tracking-wide hover:text-ck-red transition-colors duration-200 relative group"
+                  className="text-white text-xs font-garet font-semibold tracking-widest uppercase hover:text-ck-red transition-colors duration-200 relative group"
                 >
-                  PRODUCTS
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ck-red group-hover:w-full transition-all duration-300"></span>
+                  Menu
+                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-ck-red group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </button>
               </FadeInSection>
               <FadeInSection>
                 <button
                   onClick={scrollContacts}
-                  className="text-white text-sm font-garet font-medium tracking-wide hover:text-ck-red transition-colors duration-200 relative group"
+                  className="text-white text-xs font-garet font-semibold tracking-widest uppercase hover:text-ck-red transition-colors duration-200 relative group"
                 >
-                  CONTACTS
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ck-red group-hover:w-full transition-all duration-300"></span>
+                  Contact
+                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-ck-red group-hover:w-full transition-all duration-300 rounded-full"></span>
                 </button>
               </FadeInSection>
             </div>
             <FadeInSection>
               <button
                 onClick={clickedMenu}
-                className="md:hidden flex flex-col gap-1.5 p-2 hover:bg-white/10 rounded-lg transition-all"
+                className={`md:hidden flex flex-col gap-1.5 p-2 rounded-lg transition-all ${dropDown ? 'bg-white/20' : 'hover:bg-white/10'}`}
               >
-                <span className="w-6 h-0.5 bg-white transition-all"></span>
-                <span className="w-6 h-0.5 bg-white transition-all"></span>
-                <span className="w-6 h-0.5 bg-white transition-all"></span>
+                <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${dropDown ? 'rotate-45 translate-y-2' : ''}`}></span>
+                <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${dropDown ? 'opacity-0' : ''}`}></span>
+                <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${dropDown ? '-rotate-45 -translate-y-2' : ''}`}></span>
               </button>
             </FadeInSection>
           </div>
           {dropDown && (
-            <div className={`w-full bg-black/80 backdrop-blur-md md:hidden flex flex-col items-center gap-6 py-8 mt-20 transition-all duration-300 ${ddEffect}`}>
-              <button onClick={scrollAbout} className="text-white text-sm font-garet font-medium hover:text-ck-red transition-colors">
-                ABOUT
+            <div className={`w-full bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-lg md:hidden flex flex-col items-center gap-4 py-24 mt-20 transition-all duration-300 ${ddEffect}`}>
+              <button 
+                onClick={() => {scrollAbout(); setDropdown(false);}}
+                className="text-white text-sm font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/5"
+              >
+                About Us
               </button>
-              <button onClick={scrollProducts} className="text-white text-sm font-garet font-medium hover:text-ck-red transition-colors">
-                PRODUCTS
+              <button 
+                onClick={() => {scrollProducts(); setDropdown(false);}}
+                className="text-white text-sm font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/5"
+              >
+                Our Menu
               </button>
-              <button onClick={scrollContacts} className="text-white text-sm font-garet font-medium hover:text-ck-red transition-colors">
-                CONTACTS
+              <button 
+                onClick={() => {scrollContacts(); setDropdown(false);}}
+                className="text-white text-sm font-garet font-semibold tracking-wide hover:text-ck-red transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/5"
+              >
+                Contact Us
               </button>
             </div>
           )}
         </nav>
 
         
-        <div className="w-full h-full flex items-center justify-center px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-7xl items-center">
+        <div className="w-full h-full flex items-center justify-center px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 max-w-6xl items-center w-full">
             <FadeInSection>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6 sm:gap-8">
                 <div>
-                  <h1 className="font-milk text-white xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl font-bold leading-tight tracking-tight">
+                  <h1 className="font-milk text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
                     Crispy King
                   </h1>
-                  <h2 className="font-garet text-ck-red xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-xl mt-4 font-bold tracking-wide">
+                  <h2 className="font-garet text-ck-red text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mt-3 sm:mt-4 font-bold tracking-wide">
                     Veterans Branch
                   </h2>
                 </div>
-                <p className="text-white/90 font-garet text-lg md:text-base leading-relaxed max-w-md">
+                <p className="text-white/90 font-garet text-sm sm:text-base md:text-base lg:text-lg leading-relaxed max-w-md">
                   Zamboanga&apos;s favorite destination for crispy, delicious Filipino fried chicken. Premium quality, authentic taste, unbeatable value.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
                   <a
                     target="_blank"
                     href={locationLink}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-ck-red text-white font-milk font-bold text-lg rounded-lg hover:bg-ck-red-dark transition-all duration-300 hover:shadow-xl hover:shadow-ck-red/30"
+                    className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-ck-red text-white font-milk font-bold text-sm sm:text-base md:text-lg rounded-lg hover:bg-ck-red-dark transition-all duration-300"
                   >
                     Find Location
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
                   <button
                     onClick={scrollProducts}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white font-milk font-bold text-lg rounded-lg hover:bg-white hover:text-ck-red transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white font-milk font-bold text-sm sm:text-base md:text-lg rounded-lg hover:bg-white hover:text-ck-red transition-all duration-300"
                   >
                     View Menu
                   </button>
@@ -160,11 +169,11 @@ const home = ({ about, products, contacts }) => {
               </div>
             </FadeInSection>
             <FadeInSection delay={200}>
-              <a target="_blank" href={locationLink} className="group">
+              <a target="_blank" href={locationLink} className="group block">
                 <img
                   src="/assets/Icons/Store.png"
                   alt="Crispy King storefront"
-                  className="w-full h-auto rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105 origin-center"
+                  className="w-full h-auto rounded-2xl transition-all duration-500 group-hover:scale-105 origin-center"
                 />
               </a>
             </FadeInSection>
