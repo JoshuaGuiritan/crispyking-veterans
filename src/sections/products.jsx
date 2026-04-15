@@ -27,8 +27,8 @@ const products = ({products}) => {
                         <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
                             <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
                                 <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
-                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                                        <img src="/assets/Icons/friedchicken.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    <div className="flex justify-center items-center flex-shrink-0 p-8 md:w-1/2">
+                                        <img src="/assets/Icons/friedchicken.png" className="w-40 md:w-48 transition-transform duration-500 group-hover:scale-110"/>
                                     </div>
                                     <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
                                         <div>
@@ -46,8 +46,8 @@ const products = ({products}) => {
                         <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
                             <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
                                 <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
-                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                                        <img src="/assets/Icons/ngohiong.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    <div className="flex justify-center items-center flex-shrink-0 p-8 md:w-1/2">
+                                        <img src="/assets/Icons/ngohiong.png" className="w-40 md:w-48 transition-transform duration-500 group-hover:scale-110"/>
                                     </div>
                                     <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
                                         <div>
@@ -65,8 +65,8 @@ const products = ({products}) => {
                         <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
                             <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
                                 <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
-                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                                        <img src="/assets/Icons/meatball.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    <div className="flex justify-center items-center flex-shrink-0 p-8 md:w-1/2">
+                                        <img src="/assets/Icons/meatball.png" className="w-40 md:w-48 transition-transform duration-500 group-hover:scale-110"/>
                                     </div>
                                     <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
                                         <div>
@@ -84,8 +84,8 @@ const products = ({products}) => {
                         <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
                             <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
                                 <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
-                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                                        <img src="/assets/Icons/siomai.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    <div className="flex justify-center items-center flex-shrink-0 p-8 md:w-1/2">
+                                        <img src="/assets/Icons/siomai.png" className="w-40 md:w-48 transition-transform duration-500 group-hover:scale-110"/>
                                     </div>
                                     <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
                                         <div>
@@ -103,8 +103,8 @@ const products = ({products}) => {
                         <CarouselItem className="md:basis-1/2 lg:basis-1/2 basis-full">
                             <Card className="h-full bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl overflow-hidden hover:shadow-2xl hover:border-ck-red/30 transition-all duration-500 group">
                                 <CardContent className="flex flex-col h-full justify-between p-0 md:flex-row">
-                                    <div className="flex justify-center items-center flex-shrink-0 p-6 md:w-1/2 bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                                        <img src="/assets/Icons/lumpia.png" className="w-32 md:w-40 transition-transform duration-500 group-hover:scale-110"/>
+                                    <div className="flex justify-center items-center flex-shrink-0 p-8 md:w-1/2">
+                                        <img src="/assets/Icons/lumpia.png" className="w-40 md:w-48 transition-transform duration-500 group-hover:scale-110"/>
                                     </div>
                                     <div className="flex flex-col justify-center items-start p-6 md:w-1/2 gap-4">
                                         <div>
